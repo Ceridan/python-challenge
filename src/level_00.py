@@ -6,4 +6,4 @@ def solution() -> int:
 
 
 sol = solution()
-utils.print_solution(sol)
+utils.print_solution_html(sol)

@@ -11,4 +11,4 @@ def solution(data: str) -> str:
 
 input_data = utils.read_input_from_file(level=2)
 sol = solution(input_data)
-utils.print_solution(sol)
+utils.print_solution_html(sol)

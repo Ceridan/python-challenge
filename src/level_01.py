@@ -19,4 +19,4 @@ hint = solution(input_cipher)
 print(hint)
 
 sol = solution("map")
-utils.print_solution(sol)
+utils.print_solution_html(sol)
