@@ -8,7 +8,9 @@ import utils
 def solution(initial_nothing: int) -> str:
     conn = http.client.HTTPConnection("www.pythonchallenge.com")
     try:
+        text = ""
         next_nothing = str(initial_nothing)
+
         while next_nothing:
             conn.request("GET", f"/pc/def/linkedlist.php?nothing={next_nothing}")
             res = conn.getresponse()
