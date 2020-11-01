@@ -14,7 +14,7 @@ def solution(cipher: str) -> str:
     return "".join(original)
 
 
-input_cipher = utils.read_input_from_file(level=1)
+input_cipher = utils.read_level_input_from_file(level=1)
 hint = solution(input_cipher)
 print(hint)
 

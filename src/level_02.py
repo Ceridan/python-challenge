@@ -9,6 +9,6 @@ def solution(data: str) -> str:
     return "".join(unique_chars)
 
 
-input_data = utils.read_input_from_file(level=2)
+input_data = utils.read_level_input_from_file(level=2)
 sol = solution(input_data)
 utils.print_solution_html(sol)

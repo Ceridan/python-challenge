@@ -7,6 +7,6 @@ def solution(data: str) -> str:
     return "".join(result)
 
 
-input_data = utils.read_input_from_file(level=3)
+input_data = utils.read_level_input_from_file(level=3)
 sol = solution(input_data)
 utils.print_solution_php(sol)

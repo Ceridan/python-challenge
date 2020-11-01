@@ -1,5 +1,10 @@
-def read_input_from_file(level: int) -> str:
-    with open(f"data/level_{str(level).zfill(2)}.txt") as f:
+def read_level_input_from_file(level: int) -> str:
+    filename = f"data/level_{str(level).zfill(2)}.txt"
+    return read_file(filename)
+
+
+def read_file(filename: str) -> str:
+    with open(filename) as f:
         return f.read()
 
 
