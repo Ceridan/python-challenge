@@ -60,5 +60,5 @@ hint = get_hint(filename, initial_filename="90052")
 print(f"HINT:\n{hint}\n----------------------")
 
 sol = solution(filename, initial_filename="90052")
-utils.print_solution_html(sol)
+utils.print_solution_def_html(sol)
 

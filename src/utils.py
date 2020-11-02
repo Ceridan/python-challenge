@@ -9,16 +9,24 @@ def read_file(filename: str) -> str:
 
 
 def print_solution(solution: str) -> str:
-    _print_solution_base(solution)
+    _print_solution_def_base(solution)
 
 
-def print_solution_html(solution: str) -> str:
-    _print_solution_base(f"{solution}.html")
+def print_solution_def_html(solution: str) -> str:
+    _print_solution_def_base(f"{solution}.html")
 
 
-def print_solution_php(solution: str) -> str:
-    _print_solution_base(f"{solution}.php")
+def print_solution_return_html(solution: str) -> str:
+    _print_solution_return_base(f"{solution}.html")
 
 
-def _print_solution_base(solution_with_extension: str) -> str:
+def print_solution_def_php(solution: str) -> str:
+    _print_solution_def_base(f"{solution}.php")
+
+
+def _print_solution_def_base(solution_with_extension: str) -> str:
     print(f"Next level: http://www.pythonchallenge.com/pc/def/{solution_with_extension}")
+
+
+def _print_solution_return_base(solution_with_extension: str) -> str:
+    print(f"Next level: http://www.pythonchallenge.com/pc/return/{solution_with_extension}")

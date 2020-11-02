@@ -28,4 +28,4 @@ def solution(picture_filename: str) -> str:
 
 
 sol = solution("oxygen.png")
-utils.print_solution_html(sol)
+utils.print_solution_def_html(sol)

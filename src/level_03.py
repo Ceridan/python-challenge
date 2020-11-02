@@ -9,4 +9,4 @@ def solution(data: str) -> str:
 
 input_data = utils.read_level_input_from_file(level=3)
 sol = solution(input_data)
-utils.print_solution_php(sol)
+utils.print_solution_def_php(sol)
