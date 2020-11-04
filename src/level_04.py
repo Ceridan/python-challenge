@@ -1,26 +1,21 @@
-import http.client
 import re
 from typing import Optional
+
+import requests
 
 import utils
 
 
 def solution(initial_nothing: int) -> str:
-    conn = http.client.HTTPConnection("www.pythonchallenge.com")
-    try:
-        text = ""
-        next_nothing = str(initial_nothing)
+    text = ""
+    next_nothing = str(initial_nothing)
 
-        while next_nothing:
-            conn.request("GET", f"/pc/def/linkedlist.php?nothing={next_nothing}")
-            res = conn.getresponse()
-            print(res.status, res.reason)
-            text = res.read().decode("utf-8")
-            print(text)
-            next_nothing = extract_next_nothing(text)
-        return text
-    finally:
-        conn.close()
+    while next_nothing:
+        r = requests.get(f"http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing={next_nothing}")
+        print(f"{r.status_code} {r.reason}: {r.text}")
+        text = r.text
+        next_nothing = extract_next_nothing(text)
+    return text
 
 
 def extract_next_nothing(text: str) -> Optional[str]:
