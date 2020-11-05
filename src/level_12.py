@@ -1,7 +1,12 @@
+import requests
 from PIL import Image, ImageFile
 
 
 def solution(gfx_filename: str):
+    r = requests.get(f"http://www.pythonchallenge.com/pc/return/evil4.jpg", auth=("huge", "file"))
+    hint1 = r.text
+    print(hint1)
+
     with open(gfx_filename, "rb") as evil_gfx:
         data = evil_gfx.read()
         for i in range(5):
