@@ -2,8 +2,8 @@ from PIL import Image
 
 
 def solution(picture_filename: str):
-    with Image.open(f"data/{picture_filename}") as im:
-        pixels = im.load()
+    with Image.open(f"data/{picture_filename}") as img:
+        pixels = img.load()
         width, height = 100, 100
         new_img = Image.new("RGB", (width, height))
 
